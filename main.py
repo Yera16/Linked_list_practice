@@ -168,6 +168,21 @@ class LinkedList:
         prev1.next = dummy2.next  # Connect lesser list with greater or equal list
         self.head = dummy1.next  # Update head
 
+
+#You are given a singly linked list that contains integer values, where some of these values may be duplicated.
+#Note: this linked list class does NOT have a tail which will make this method easier to implement.
+# Your task is to implement a method called remove_duplicates() within the LinkedList class that removes all duplicate values from the list.
+# Your method should not create a new list, but rather modify the existing list in-place, preserving the relative order of the nodes.
+# You can implement the remove_duplicates() method in two different ways:
+# Using a Set - This approach will have a time complexity of O(n), where n is the number of nodes in the linked list. You are allowed to use the provided Set data structure in your implementation.
+# Without using a Set - This approach will have a time complexity of O(n^2), where n is the number of nodes in the linked list. You are not allowed to use any additional data structures for this implementation.
+# Here is the method signature you need to implement:
+# Example:
+# Input:
+# LinkedList: 1 -> 2 -> 3 -> 1 -> 4 -> 2 -> 5
+# Output:
+# LinkedList: 1 -> 2 -> 3 -> 4 -> 5
+
     def remove_duplicates(self):
             if not self.head or not self.head.next:
                 return
@@ -193,7 +208,21 @@ class LinkedList:
         #     prev = temp
         #     temp = temp.next
 
-
+#You are given a singly linked list and two integers start_index and end_index.
+    # Your task is to write a method reverse_between within the LinkedList class that reverses the nodes of the linked list from start_index to end_index
+    #(inclusive using 0-based indexing) in one pass and in-place.
+#Note: the Linked List does not have a tail which will make the implementation easier.
+#Assumption: You can assume that start_index and end_index are not out of bounds.
+#Input
+#The method reverse_between takes two integer inputs start_index and end_index.
+#The method will only be passed valid indexes (you do not need to test whether the indexes are out of bounds)
+##Output
+#The method should modify the linked list in-place by reversing the nodes from start_index to  end_index.
+#If the linked list is empty or has only one node, the method should return None.
+#Example
+#Suppose the linked list is 1 -> 2 -> 3 -> 4 -> 5, and start_index = 2 and end_index = 4. Then, the method should modify the linked list to 1 -> 2 -> 5 -> 4 -> 3 .
+#Constraints
+#The algorithm should run in one pass and in-place, with a time complexity of O(n) and a space complexity of O(1).
     def reverse_between(self, start_index, end_index):
         if start_index < 0 or start_index >= self.length or end_index < 0 or end_index >= self.length:
             return None
